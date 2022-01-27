@@ -7,8 +7,90 @@
 }
 
 body{
-  background-color: rgb(32, 29, 29);
+  background-color: white;
   font-family: 'Open Sans', sans-serif;
+  transition: .3s ease all;
+}
+
+nav{
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+ border-radius: 10px;
+ transition: .3s ease all;
+ 
+}
+
+nav a{
+  margin-right: 20px;
+
+}
+nav .nav-links{
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-links a:hover{
+  text-decoration: underline 3px solid;
+  font-weight: 500;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+.logo{
+  font-weight: 700;
+}
+
+.switch{
+  background: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+
+.switch::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .9s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 8, 8, .2);
+}
+
+.switch.active{
+  background: orange;
+  color: black;
+}
+
+.switch.active::after{
+  right: 0;
+  left: unset;
+
+}
+
+
+
+.switch span{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
 }
 
 textarea{
@@ -16,14 +98,15 @@ textarea{
 }
 
 .container{
-
-  width: 100%;
-  height: 100vh;
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
 
 }
 
 .header{
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -37,7 +120,7 @@ margin-bottom: 15px;
 
 }
 
-.inp-1, .inp-2{
+.contain .inp-1, .inp-2{
   padding: 4px;
   border: 2px solid black;
 
@@ -56,29 +139,77 @@ margin-bottom: 15px;
   align-content: center;
 }
 
-.mayus, .min {
+.mayus, .min, .Cap{
   padding: 10px 25px;
-  width: 14%;
+  width: 15%;
   border: none;
   border-radius: 5px;
   color: black;
-  background-color: white;
+  background: white;
   box-shadow: 0 2px 10px 2px black;
   border: 2px solid white;
+  margin-right: 14px;
 
   font-size: 16px;
   font-weight: 500;
+  transition: .3s ease all;
 }
 
-button:hover {
+.btns button:hover {
   cursor: pointer;
-  background-color: rgb(36, 33, 33);
+  background: rgb(48, 45, 45);;
   color: white;
 }
 
-.mayus{
+/* .mayus{
   margin-right: 14px;
 
+} */
+
+
+/* DARKMODE STYLE */
+
+body.dark{
+  background: rgb(48, 45, 45);
 }
 
+body.dark nav{
+  background: rgb(92, 88, 88);
+}
 
+body.dark nav a{
+  color: white;
+}
+
+body.dark .header{
+  color: white;
+}
+
+body.dark .inp-1, .inp-2{
+  border: 2px solid gray;
+}
+
+body.dark .btns button{
+  background: rgb(48, 45, 45);
+  border: 2px solid gray;
+  color: white;
+  transition: .3s ease all;
+}
+
+body.dark .btns button:hover{
+  background: white;
+  border: 2px solid gray;
+  color: black;
+}
+
+@media screen and (max-width: 450px){
+
+
+
+  .btns button{
+    width: 150px ;
+    padding: 5px 0px;
+ }
+  
+  
+}

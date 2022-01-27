@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/06a94096a9.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 
   <title>Haters Inc. | MAYUS PAGE</title>
@@ -11,6 +12,20 @@
 <body>
 
 <div class="container">
+
+  <nav>
+    <a href="" class="logo">Haters Inc.</a>
+
+    <div class="nav-links">
+      <a href="">Home</a>
+      <a href="">Contact us</a>
+      <button class="switch" id="switch">
+        <span><i class="fas fa-sun"></i></span>
+        <span><i class="fas fa-moon"></i></span>
+      </button>
+    </div>
+
+  </nav>
   <div class="header">
     <h1>Haters Inc.</h1>
     <h2>Mayus | Min page</h2>
@@ -22,10 +37,12 @@
 
   </div>
 
-<div class="btns">
-  <button class="mayus" onclick="ConvertMayus();">all caps</button>
-  <button class="min" onclick="ConvertMin();">all lowercase</button>
-</div>
+  <div class="btns">
+    <button class="mayus" onclick="ConvertMayus();">All caps</button>
+    <button class="min" onclick="ConvertMin();">All lowercase</button>
+    <button class="Cap" onclick="Capitalize()">Capitalize</button>
+  </div>
+
 </div>
 
   <script src="main.js"></script>
